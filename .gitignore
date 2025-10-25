@@ -1,0 +1,26 @@
+# Python env and bytecode
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Data outputs (do not commit large generated outputs)
+data/test_output/
+*.gpkg
+*.parquet
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Secrets
+.env
+credentials.json
