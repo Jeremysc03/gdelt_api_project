@@ -7,6 +7,7 @@ Enrich news article samples with NER, sentiment, attack detection, perspective l
 
 # Activate/Install venv (VS code powershell):
 To create: python -m venv venv
+
 To activate: .\venv\Scripts\Activate.ps1
 
 # If user needs permission for venv:
@@ -91,3 +92,4 @@ enriched_articles.parquet    // New file for that involves cluster data
 # Final note
 remote_results currently isn't implemented. If we want remote data then I can begin to implement that later but right now everything is local only.
 If remote data is going to be used, must create folder named remote_results for the results to be added into that.
+
