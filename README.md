@@ -5,11 +5,19 @@ Enrich news article samples with NER, sentiment, attack detection, perspective l
 # to see if venv is active, your terminal should look similar to this if it is:
 (venv) PS C:\Users\jscso\Desktop\gdelt_api_project>
 
-# Activate venv (if not active):
-PowerShell: .\venv\Scripts\Activate.ps1
+# Activate/Install venv (VS code powershell):
+To create: python -m venv venv
+To activate: .\venv\Scripts\Activate.ps1
 
 # If user needs permission for venv:
 PowerShell: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Dependencies needed for venv:
+pip install --upgrade pip  //If your pip needs to be updated
+pip install pandas pycountry spacy vaderSentiment scikit-learn requests pyarrow
+python -m spacy download en_core_web_sm
+pip install geopandas fiona shapely
+pip install sentence-transformers hdbscan
 
 # Quick status check
 Confirm core packages are present:

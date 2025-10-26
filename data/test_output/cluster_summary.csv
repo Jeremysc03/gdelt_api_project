@@ -1,0 +1,6 @@
+cluster_id,cluster_size,sample_date,country_alpha2,perspective,mean_tone_local,attack_count_total,top_domains,sample_titles_urls
+EG_2023-01-01_c0,1,2023-01-01,EG,other,0.0,0,shorouknews.com,اتحضر للأخضر اتحضر للمستقبل .. ندوة بإعلام زفتى لمناقشة مفهوم النظام البيئي | https://www.shorouknews.com/news/view.aspx?cdate=01012023&id=613aa7c7-22bb-4e52-8103-99c49501c383
+GH_2023-01-01_c1,1,2023-01-01,GH,other,0.4019,0,modernghana.com,Support the course of climate change Executive Director of SOHI to Ghanaians | https://www.modernghana.com/news/1203765/support-the-course-of-climate-change-executive.html
+PK_2023-01-01_c3,1,2023-01-01,PK,other,0.3818,0,dawn.com,ADB helps Sialkot residents lessen climate impact - Newspaper | https://www.dawn.com/news/1729328/adb-helps-sialkot-residents-lessen-climate-impact
+US_2023-01-01_c4,1,2023-01-01,US,allied,0.0,0,psychologytoday.com,Transilience : A New Way to Think About Climate Change | https://www.psychologytoday.com/us/blog/psychiatry-for-the-people/202301/transilience-a-new-way-to-think-about-climate-change
+NG_2023-01-02_c2,1,2023-01-02,NG,other,0.0,0,vanguardngr.com,"Climate change , under - represented in 2023 election campaigns – Expert | https://www.vanguardngr.com/2023/01/climate-change-under-represented-in-2023-election-campaigns-expert/"

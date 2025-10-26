@@ -38,7 +38,7 @@ try:
 except Exception:
     GEOPANDAS_AVAILABLE = False
 
-# CONFIG - edit as needed
+# File config - edit as needed
 DATA_SAMPLES = Path("data/samples")
 OUTPUT_DIR = Path("data/test_output")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -177,7 +177,7 @@ def pick_primary_location_from_entities(entities):
             return e.get("text")
     return None
 
-# GeoNames lookup (best-effort); requires GEO_NAMES_USERNAME configured
+# GeoNames lookup. requires GEO_NAMES_USERNAME to be configured
 def geonames_lookup_place(q, username):
     if not username:
         return None
@@ -205,7 +205,6 @@ def infer_coords_for_row(row, geonames_username=""):
     2) else fallback to sourcecountry_norm centroid mapping
     Returns dict with lon, lat, method
     """
-    # 1) entities
     ents = row.get("entities") or []
     candidate = pick_primary_location_from_entities(ents)
     if candidate and geonames_username:
@@ -213,14 +212,14 @@ def infer_coords_for_row(row, geonames_username=""):
         time.sleep(GEONAMES_RATE_SLEEP)
         if res:
             return {"lon": res["lon"], "lat": res["lat"], "method": "geonames_entity", "place_name": res.get("name"), "geocountry": res.get("country_code")}
-    # 2) try domain TLD or sourcecountry_norm alpha2
+    # Try domain TLD or sourcecountry_norm for alpha2
     sc = row.get("sourcecountry_norm")
     if isinstance(sc, dict):
         code = sc.get("alpha2")
         if code and code in COUNTRY_CENTROIDS:
             lon, lat = COUNTRY_CENTROIDS[code]
             return {"lon": lon, "lat": lat, "method": "country_centroid", "geocountry": code}
-    # 3) fallback: try entity without geonames or any numeric in text
+    # fallback to try entity without geonames or any numeric in text
     return {"lon": None, "lat": None, "method": None, "geocountry": None}
 
 # Enrichment and signals

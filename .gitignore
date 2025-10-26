@@ -9,12 +9,12 @@ __pycache__/
 .vscode/
 .idea/
 
-# Data outputs (do not commit large generated outputs)
-data/test_output/
-*.gpkg
-*.parquet
-*.csv
-*.json
+# Data outputs
+# data/test_output/
+# *.gpkg
+# *.parquet
+# *.csv
+# *.json
 
 # OS
 .DS_Store

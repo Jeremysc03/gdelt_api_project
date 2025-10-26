@@ -1,0 +1,16 @@
+{
+  "sample_rows": 5,
+  "enriched_rows": 5,
+  "signals_rows": 5,
+  "top_domains": {
+    "psychologytoday.com": 1,
+    "dawn.com": 1,
+    "modernghana.com": 1,
+    "vanguardngr.com": 1,
+    "shorouknews.com": 1
+  },
+  "clusters_summary": {
+    "1": 5
+  },
+  "geocoded_count": 1
+}
