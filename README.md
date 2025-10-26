@@ -15,13 +15,18 @@ PowerShell: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # Dependencies needed for venv:
 pip install --upgrade pip  //If your pip needs to be updated
+
 pip install pandas pycountry spacy vaderSentiment scikit-learn requests pyarrow
+
 python -m spacy download en_core_web_sm
+
 pip install geopandas fiona shapely
+
 pip install sentence-transformers hdbscan
 
 # Quick status check
 Confirm core packages are present:
+
 pip show pandas spacy vaderSentiment scikit-learn requests pyarrow
 
 # Run pipeline:
@@ -92,4 +97,5 @@ enriched_articles.parquet    // New file for that involves cluster data
 # Final note
 remote_results currently isn't implemented. If we want remote data then I can begin to implement that later but right now everything is local only.
 If remote data is going to be used, must create folder named remote_results for the results to be added into that.
+
 
