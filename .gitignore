@@ -13,6 +13,8 @@ __pycache__/
 data/test_output/
 *.gpkg
 *.parquet
+*.csv
+*.json
 
 # OS
 .DS_Store
